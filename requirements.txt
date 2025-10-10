@@ -1,6 +1,7 @@
 pandas
 numpy
 matplotlib
+seaborn
 scipy
 scikit-learn
 statsmodels
@@ -9,3 +10,4 @@ xlsxwriter
 xlrd
 python-dateutil
 eikon
+arch

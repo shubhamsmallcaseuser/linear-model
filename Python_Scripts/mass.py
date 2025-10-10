@@ -43,8 +43,18 @@ class DistanceProfile:
 
 class MASS:
     def __init__(self, Query, Target):
-        self.q = Query
-        self.h = Target
+        # self.q = Query
+        # self.h = Target
+        # self.m = len(self.q)
+        # self.n = len(self.h)
+        if isinstance(Query, pd.DataFrame):
+            self.q = Query
+        else:
+            self.q = pd.DataFrame(Query)
+        if isinstance(Target, pd.DataFrame):
+            self.h = Target
+        else:
+            self.h = pd.DataFrame(Target)
         self.m = len(self.q)
         self.n = len(self.h)
     
@@ -69,19 +79,28 @@ class MASS:
         # resDf['Distance'] = np.sqrt(-2*(resDf['Q'].div(resDf['STDEV']) -self.m))
         #
         # return resDf
-        colName = self.q.columns[0]  # safe, since self.q is a DataFrame
-        Q = pd.Series(stats.zscore(self.q[colName], ddof=1),
-                      index=self.q.index,
-                      name=colName)
+        # 1. remember the column name while we still have the DataFrame
+        col_name = self.q.columns[0]
 
-        stdv = self.h.rolling(self.m).std(ddof=1)
-        dots = np.convolve(self.h[colName].values, Q[::-1].values)
+        # 2. standardise (returns ndarray)
+        Q = stats.zscore(self.q[col_name].values, ddof=1)
 
-        resDf = pd.DataFrame(stdv.values.flatten(), index=self.h.index, columns=['STDEV'])
-        resDf = resDf.loc[self.h.index[-len(dots[(self.m - 1):-(self.m - 1)]):]]
-        resDf['Q'] = dots[(self.m - 1):-(self.m - 1)]
-        resDf['Distance'] = np.sqrt(-2 * (resDf['Q'].div(resDf['STDEV']) - self.m))
+        # 3. rolling std of the target
+        stdv = self.h.rolling(self.m).std(ddof=1).values.flatten()
 
+        # 4. convolution: reverse the query pattern
+        dots = np.convolve(self.h[col_name].values, Q[::-1], mode='full')
+
+        # 5. keep only the valid part of the convolution
+        first = self.m - 1
+        last = len(dots) - (self.m - 1)
+        dots = dots[first:last]
+
+        # 6. build the result DataFrame
+        resDf = pd.DataFrame({'STDEV': stdv[self.m - 1:],
+                              'Q': dots,
+                              'Distance': np.sqrt(2 * (self.m - dots / stdv[self.m - 1:]))},
+                             index=self.h.index[self.m - 1:])
         return resDf
 
     def getActual(self):
@@ -136,22 +155,42 @@ class Match:
         # idx = np.argsort(dp)#[:self.num]
         # match_idx = self.hist.iloc[idx].index
         # return idx, match_idx
-        dp = self.getDP()
-        # sort by Distance column
-        idx = np.argsort(dp["Distance"].values)  # 1D array
-        match_idx = self.hist.iloc[idx].index
-        print("dp shape:", dp.shape)
-        print("idx shape:", idx.shape)
-        return idx, match_idx
+        # dp = self.getDP()  # <-- DataFrame
+        # dist = dp['Distance'].values  # 1-D ndarray
+        # idx = np.argsort(dist)  # 1-D integer positions
+        # match_idx = self.hist.index[self.win - 1:][idx]  # align with dp length
+        # return idx, match_idx
+        dp = self.getDP()  # DataFrame
+        dist = dp['Distance'].values  # 1-D
+        idx = np.argsort(dist)  # positions inside dp
+
+        # absolute iloc in the original history
+        abs_pos = np.arange(self.win - 1, len(self.hist))[idx]
+        match_idx = self.hist.index[abs_pos]
+        return abs_pos, match_idx
     
     def getRegime(self):
-        si, sd = self.getMatchIndex()
+        # si, sd = self.getMatchIndex()
+        # dp = self.getDP()
+        #
+        # ed = self.data.iloc[si+self.win].index
+        # reg = pd.DataFrame([si, sd, ed, dp[si]], index=['idx', 'start', 'end', 'dp']).T
+        # # reg['window'] = np.repeat(self.win, self.num)
+        # return reg[reg['dp']< self.thdcorr]
+        abs_pos, sd = self.getMatchIndex()
         dp = self.getDP()
-        
-        ed = self.data.iloc[si+self.win].index
-        reg = pd.DataFrame([si, sd, ed, dp[si]], index=['idx', 'start', 'end', 'dp']).T
-        # reg['window'] = np.repeat(self.win, self.num)
-        return reg[reg['dp']< self.thdcorr]
+
+        # end of each regime
+        ed_pos = abs_pos + self.win
+        # guard against overflow (last windows)
+        mask = ed_pos < len(self.data)
+        abs_pos, ed_pos = abs_pos[mask], ed_pos[mask]
+
+        reg = pd.DataFrame({'idx': abs_pos,
+                            'start': self.data.index[abs_pos],
+                            'end': self.data.index[ed_pos],
+                            'dp': dp['Distance'].values[np.argsort(dp['Distance'].values)][mask]})
+        return reg[reg['dp'] < self.thdcorr]
     
     def getDPValues(self):
         dp = self.getDP()
