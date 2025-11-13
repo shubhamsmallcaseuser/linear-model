@@ -11,3 +11,4 @@ xlrd
 python-dateutil
 eikon
 arch
+tqdm

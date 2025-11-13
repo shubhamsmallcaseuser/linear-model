@@ -1,0 +1,220 @@
+16:23:36,789 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+16:23:36,793 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+16:28:34,818 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+16:28:34,834 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+17:47:26,404 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+17:47:26,416 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+11:51:53,68 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+11:51:53,72 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+12:58:02,562 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+12:58:02,566 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+13:06:30,507 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+13:06:30,510 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+13:08:57,244 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+13:08:57,248 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+14:28:48,493 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+14:28:48,498 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+14:40:15,652 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+14:40:15,656 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-11-12 14:59:27,456 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-01-03T00:00:00.000000000
+14:59:27,456 windmillcheck_ALL INFO Rebal Date-----------------2020-01-03T00:00:00.000000000
+2025-11-12 14:59:27,491 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-03-06T00:00:00.000000000
+14:59:27,491 windmillcheck_ALL INFO Rebal Date-----------------2020-03-06T00:00:00.000000000
+2025-11-12 14:59:27,516 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-05-08T00:00:00.000000000
+14:59:27,516 windmillcheck_ALL INFO Rebal Date-----------------2020-05-08T00:00:00.000000000
+2025-11-12 14:59:27,536 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-06-05T00:00:00.000000000
+14:59:27,536 windmillcheck_ALL INFO Rebal Date-----------------2020-06-05T00:00:00.000000000
+2025-11-12 14:59:27,546 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-07-03T00:00:00.000000000
+14:59:27,546 windmillcheck_ALL INFO Rebal Date-----------------2020-07-03T00:00:00.000000000
+2025-11-12 14:59:27,566 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-08-07T00:00:00.000000000
+14:59:27,566 windmillcheck_ALL INFO Rebal Date-----------------2020-08-07T00:00:00.000000000
+2025-11-12 14:59:27,586 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-09-04T00:00:00.000000000
+14:59:27,586 windmillcheck_ALL INFO Rebal Date-----------------2020-09-04T00:00:00.000000000
+2025-11-12 14:59:28,140 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-05-05T00:00:00.000000000
+14:59:28,140 windmillcheck_ALL INFO Rebal Date-----------------2023-05-05T00:00:00.000000000
+2025-11-12 14:59:28,176 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-08-04T00:00:00.000000000
+14:59:28,176 windmillcheck_ALL INFO Rebal Date-----------------2023-08-04T00:00:00.000000000
+2025-11-12 14:59:28,216 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-11-03T00:00:00.000000000
+14:59:28,216 windmillcheck_ALL INFO Rebal Date-----------------2023-11-03T00:00:00.000000000
+2025-11-12 14:59:28,225 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-12-01T00:00:00.000000000
+14:59:28,225 windmillcheck_ALL INFO Rebal Date-----------------2023-12-01T00:00:00.000000000
+2025-11-12 14:59:28,255 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-03-02T00:00:00.000000000
+14:59:28,255 windmillcheck_ALL INFO Rebal Date-----------------2024-03-02T00:00:00.000000000
+2025-11-12 14:59:28,266 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-04-05T00:00:00.000000000
+14:59:28,266 windmillcheck_ALL INFO Rebal Date-----------------2024-04-05T00:00:00.000000000
+2025-11-12 14:59:28,315 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-09-06T00:00:00.000000000
+14:59:28,315 windmillcheck_ALL INFO Rebal Date-----------------2024-09-06T00:00:00.000000000
+2025-11-12 14:59:28,326 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-10-04T00:00:00.000000000
+14:59:28,326 windmillcheck_ALL INFO Rebal Date-----------------2024-10-04T00:00:00.000000000
+2025-11-12 14:59:28,409 - windmillcheck_ALL - INFO - Rebal Date-----------------2025-08-01T00:00:00.000000000
+14:59:28,409 windmillcheck_ALL INFO Rebal Date-----------------2025-08-01T00:00:00.000000000
+2025-11-12 14:59:28,421 - windmillcheck_ALL - INFO - Rebal Date-----------------2025-09-05T00:00:00.000000000
+14:59:28,421 windmillcheck_ALL INFO Rebal Date-----------------2025-09-05T00:00:00.000000000
+2025-11-12 15:11:27,302 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-01-03T00:00:00.000000000
+15:11:27,302 windmillcheck_ALL INFO Rebal Date-----------------2020-01-03T00:00:00.000000000
+2025-11-12 15:11:27,320 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-03-06T00:00:00.000000000
+15:11:27,320 windmillcheck_ALL INFO Rebal Date-----------------2020-03-06T00:00:00.000000000
+2025-11-12 15:11:27,341 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-05-08T00:00:00.000000000
+15:11:27,341 windmillcheck_ALL INFO Rebal Date-----------------2020-05-08T00:00:00.000000000
+2025-11-12 15:11:27,351 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-06-05T00:00:00.000000000
+15:11:27,351 windmillcheck_ALL INFO Rebal Date-----------------2020-06-05T00:00:00.000000000
+2025-11-12 15:11:27,361 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-07-03T00:00:00.000000000
+15:11:27,361 windmillcheck_ALL INFO Rebal Date-----------------2020-07-03T00:00:00.000000000
+2025-11-12 15:11:27,371 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-08-07T00:00:00.000000000
+15:11:27,371 windmillcheck_ALL INFO Rebal Date-----------------2020-08-07T00:00:00.000000000
+2025-11-12 15:11:27,381 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-09-04T00:00:00.000000000
+15:11:27,381 windmillcheck_ALL INFO Rebal Date-----------------2020-09-04T00:00:00.000000000
+2025-11-12 15:11:27,725 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-05-05T00:00:00.000000000
+15:11:27,725 windmillcheck_ALL INFO Rebal Date-----------------2023-05-05T00:00:00.000000000
+2025-11-12 15:11:27,761 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-08-04T00:00:00.000000000
+15:11:27,761 windmillcheck_ALL INFO Rebal Date-----------------2023-08-04T00:00:00.000000000
+2025-11-12 15:11:27,786 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-11-03T00:00:00.000000000
+15:11:27,786 windmillcheck_ALL INFO Rebal Date-----------------2023-11-03T00:00:00.000000000
+2025-11-12 15:11:27,794 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-12-01T00:00:00.000000000
+15:11:27,794 windmillcheck_ALL INFO Rebal Date-----------------2023-12-01T00:00:00.000000000
+2025-11-12 15:11:27,826 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-03-02T00:00:00.000000000
+15:11:27,826 windmillcheck_ALL INFO Rebal Date-----------------2024-03-02T00:00:00.000000000
+2025-11-12 15:11:27,837 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-04-05T00:00:00.000000000
+15:11:27,837 windmillcheck_ALL INFO Rebal Date-----------------2024-04-05T00:00:00.000000000
+2025-11-12 15:11:27,883 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-09-06T00:00:00.000000000
+15:11:27,883 windmillcheck_ALL INFO Rebal Date-----------------2024-09-06T00:00:00.000000000
+2025-11-12 15:11:27,890 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-10-04T00:00:00.000000000
+15:11:27,890 windmillcheck_ALL INFO Rebal Date-----------------2024-10-04T00:00:00.000000000
+2025-11-12 15:11:27,991 - windmillcheck_ALL - INFO - Rebal Date-----------------2025-08-01T00:00:00.000000000
+15:11:27,991 windmillcheck_ALL INFO Rebal Date-----------------2025-08-01T00:00:00.000000000
+2025-11-12 15:11:28,007 - windmillcheck_ALL - INFO - Rebal Date-----------------2025-09-05T00:00:00.000000000
+15:11:28,7 windmillcheck_ALL INFO Rebal Date-----------------2025-09-05T00:00:00.000000000
+2025-11-12 15:11:28,083 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-01-03T00:00:00.000000000
+15:11:28,83 windmillcheck_ALL INFO Rebal Date-----------------2020-01-03T00:00:00.000000000
+2025-11-12 15:11:28,131 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-04-03T00:00:00.000000000
+15:11:28,131 windmillcheck_ALL INFO Rebal Date-----------------2020-04-03T00:00:00.000000000
+2025-11-12 15:11:28,267 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-10-01T00:00:00.000000000
+15:11:28,267 windmillcheck_ALL INFO Rebal Date-----------------2020-10-01T00:00:00.000000000
+2025-11-12 15:11:28,640 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-06-02T00:00:00.000000000
+15:11:28,640 windmillcheck_ALL INFO Rebal Date-----------------2023-06-02T00:00:00.000000000
+2025-11-12 15:11:28,671 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-09-01T00:00:00.000000000
+15:11:28,671 windmillcheck_ALL INFO Rebal Date-----------------2023-09-01T00:00:00.000000000
+2025-11-12 17:03:26,725 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-01-03T00:00:00.000000000
+17:03:26,725 windmillcheck_ALL INFO Rebal Date-----------------2020-01-03T00:00:00.000000000
+2025-11-12 17:03:26,742 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-03-06T00:00:00.000000000
+17:03:26,742 windmillcheck_ALL INFO Rebal Date-----------------2020-03-06T00:00:00.000000000
+2025-11-12 17:03:26,756 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-05-08T00:00:00.000000000
+17:03:26,756 windmillcheck_ALL INFO Rebal Date-----------------2020-05-08T00:00:00.000000000
+2025-11-12 17:03:26,762 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-06-05T00:00:00.000000000
+17:03:26,762 windmillcheck_ALL INFO Rebal Date-----------------2020-06-05T00:00:00.000000000
+2025-11-12 17:03:26,770 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-07-03T00:00:00.000000000
+17:03:26,770 windmillcheck_ALL INFO Rebal Date-----------------2020-07-03T00:00:00.000000000
+2025-11-12 17:03:26,780 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-08-07T00:00:00.000000000
+17:03:26,780 windmillcheck_ALL INFO Rebal Date-----------------2020-08-07T00:00:00.000000000
+2025-11-12 17:03:26,786 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-09-04T00:00:00.000000000
+17:03:26,786 windmillcheck_ALL INFO Rebal Date-----------------2020-09-04T00:00:00.000000000
+2025-11-12 17:03:26,986 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-05-05T00:00:00.000000000
+17:03:26,986 windmillcheck_ALL INFO Rebal Date-----------------2023-05-05T00:00:00.000000000
+2025-11-12 17:03:27,001 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-08-04T00:00:00.000000000
+17:03:27,1 windmillcheck_ALL INFO Rebal Date-----------------2023-08-04T00:00:00.000000000
+2025-11-12 17:03:27,024 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-11-03T00:00:00.000000000
+17:03:27,24 windmillcheck_ALL INFO Rebal Date-----------------2023-11-03T00:00:00.000000000
+2025-11-12 17:03:27,039 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-12-01T00:00:00.000000000
+17:03:27,39 windmillcheck_ALL INFO Rebal Date-----------------2023-12-01T00:00:00.000000000
+2025-11-12 17:03:27,060 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-03-02T00:00:00.000000000
+17:03:27,60 windmillcheck_ALL INFO Rebal Date-----------------2024-03-02T00:00:00.000000000
+2025-11-12 17:03:27,067 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-04-05T00:00:00.000000000
+17:03:27,67 windmillcheck_ALL INFO Rebal Date-----------------2024-04-05T00:00:00.000000000
+2025-11-12 17:03:27,096 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-09-06T00:00:00.000000000
+17:03:27,96 windmillcheck_ALL INFO Rebal Date-----------------2024-09-06T00:00:00.000000000
+2025-11-12 17:03:27,101 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-10-04T00:00:00.000000000
+17:03:27,101 windmillcheck_ALL INFO Rebal Date-----------------2024-10-04T00:00:00.000000000
+2025-11-12 17:03:27,163 - windmillcheck_ALL - INFO - Rebal Date-----------------2025-08-01T00:00:00.000000000
+17:03:27,163 windmillcheck_ALL INFO Rebal Date-----------------2025-08-01T00:00:00.000000000
+2025-11-12 17:03:27,170 - windmillcheck_ALL - INFO - Rebal Date-----------------2025-09-05T00:00:00.000000000
+17:03:27,170 windmillcheck_ALL INFO Rebal Date-----------------2025-09-05T00:00:00.000000000
+2025-11-12 17:03:27,197 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-01-03T00:00:00.000000000
+17:03:27,197 windmillcheck_ALL INFO Rebal Date-----------------2020-01-03T00:00:00.000000000
+2025-11-12 17:03:27,215 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-04-03T00:00:00.000000000
+17:03:27,215 windmillcheck_ALL INFO Rebal Date-----------------2020-04-03T00:00:00.000000000
+2025-11-12 17:03:27,254 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-10-01T00:00:00.000000000
+17:03:27,254 windmillcheck_ALL INFO Rebal Date-----------------2020-10-01T00:00:00.000000000
+2025-11-12 17:03:27,451 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-06-02T00:00:00.000000000
+17:03:27,451 windmillcheck_ALL INFO Rebal Date-----------------2023-06-02T00:00:00.000000000
+2025-11-12 17:03:27,466 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-09-01T00:00:00.000000000
+17:03:27,466 windmillcheck_ALL INFO Rebal Date-----------------2023-09-01T00:00:00.000000000
+2025-11-13 13:30:34,333 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-01-03T00:00:00.000000000
+13:30:34,333 windmillcheck_ALL INFO Rebal Date-----------------2020-01-03T00:00:00.000000000
+2025-11-13 13:30:34,349 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-03-06T00:00:00.000000000
+13:30:34,349 windmillcheck_ALL INFO Rebal Date-----------------2020-03-06T00:00:00.000000000
+2025-11-13 13:30:34,361 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-05-08T00:00:00.000000000
+13:30:34,361 windmillcheck_ALL INFO Rebal Date-----------------2020-05-08T00:00:00.000000000
+2025-11-13 13:30:34,368 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-06-05T00:00:00.000000000
+13:30:34,368 windmillcheck_ALL INFO Rebal Date-----------------2020-06-05T00:00:00.000000000
+2025-11-13 13:30:34,374 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-07-03T00:00:00.000000000
+13:30:34,374 windmillcheck_ALL INFO Rebal Date-----------------2020-07-03T00:00:00.000000000
+2025-11-13 13:30:34,382 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-08-07T00:00:00.000000000
+13:30:34,382 windmillcheck_ALL INFO Rebal Date-----------------2020-08-07T00:00:00.000000000
+2025-11-13 13:30:34,388 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-09-04T00:00:00.000000000
+13:30:34,388 windmillcheck_ALL INFO Rebal Date-----------------2020-09-04T00:00:00.000000000
+2025-11-13 13:30:34,591 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-05-05T00:00:00.000000000
+13:30:34,591 windmillcheck_ALL INFO Rebal Date-----------------2023-05-05T00:00:00.000000000
+2025-11-13 13:30:34,612 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-08-04T00:00:00.000000000
+13:30:34,612 windmillcheck_ALL INFO Rebal Date-----------------2023-08-04T00:00:00.000000000
+2025-11-13 13:30:34,625 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-11-03T00:00:00.000000000
+13:30:34,625 windmillcheck_ALL INFO Rebal Date-----------------2023-11-03T00:00:00.000000000
+2025-11-13 13:30:34,625 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-12-01T00:00:00.000000000
+13:30:34,625 windmillcheck_ALL INFO Rebal Date-----------------2023-12-01T00:00:00.000000000
+2025-11-13 13:30:34,662 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-03-02T00:00:00.000000000
+13:30:34,662 windmillcheck_ALL INFO Rebal Date-----------------2024-03-02T00:00:00.000000000
+2025-11-13 13:30:34,670 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-04-05T00:00:00.000000000
+13:30:34,670 windmillcheck_ALL INFO Rebal Date-----------------2024-04-05T00:00:00.000000000
+2025-11-13 13:30:34,704 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-09-06T00:00:00.000000000
+13:30:34,704 windmillcheck_ALL INFO Rebal Date-----------------2024-09-06T00:00:00.000000000
+2025-11-13 13:30:34,706 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-10-04T00:00:00.000000000
+13:30:34,706 windmillcheck_ALL INFO Rebal Date-----------------2024-10-04T00:00:00.000000000
+2025-11-13 13:30:34,770 - windmillcheck_ALL - INFO - Rebal Date-----------------2025-08-01T00:00:00.000000000
+13:30:34,770 windmillcheck_ALL INFO Rebal Date-----------------2025-08-01T00:00:00.000000000
+2025-11-13 13:30:34,785 - windmillcheck_ALL - INFO - Rebal Date-----------------2025-09-05T00:00:00.000000000
+13:30:34,785 windmillcheck_ALL INFO Rebal Date-----------------2025-09-05T00:00:00.000000000
+2025-11-13 13:30:34,808 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-01-03T00:00:00.000000000
+13:30:34,808 windmillcheck_ALL INFO Rebal Date-----------------2020-01-03T00:00:00.000000000
+2025-11-13 13:30:34,824 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-04-03T00:00:00.000000000
+13:30:34,824 windmillcheck_ALL INFO Rebal Date-----------------2020-04-03T00:00:00.000000000
+2025-11-13 13:30:34,872 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-10-01T00:00:00.000000000
+13:30:34,872 windmillcheck_ALL INFO Rebal Date-----------------2020-10-01T00:00:00.000000000
+2025-11-13 13:30:35,081 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-06-02T00:00:00.000000000
+13:30:35,81 windmillcheck_ALL INFO Rebal Date-----------------2023-06-02T00:00:00.000000000
+2025-11-13 13:30:35,101 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-09-01T00:00:00.000000000
+13:30:35,101 windmillcheck_ALL INFO Rebal Date-----------------2023-09-01T00:00:00.000000000
+2025-11-13 13:30:35,278 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-01-03T00:00:00.000000000
+13:30:35,278 windmillcheck_ALL INFO Rebal Date-----------------2020-01-03T00:00:00.000000000
+2025-11-13 13:30:35,286 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-02-01T00:00:00.000000000
+13:30:35,286 windmillcheck_ALL INFO Rebal Date-----------------2020-02-01T00:00:00.000000000
+2025-11-13 13:30:35,294 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-03-06T00:00:00.000000000
+13:30:35,294 windmillcheck_ALL INFO Rebal Date-----------------2020-03-06T00:00:00.000000000
+2025-11-13 13:30:35,306 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-05-08T00:00:00.000000000
+13:30:35,306 windmillcheck_ALL INFO Rebal Date-----------------2020-05-08T00:00:00.000000000
+2025-11-13 13:30:35,318 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-07-03T00:00:00.000000000
+13:30:35,318 windmillcheck_ALL INFO Rebal Date-----------------2020-07-03T00:00:00.000000000
+2025-11-13 13:30:35,326 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-08-07T00:00:00.000000000
+13:30:35,326 windmillcheck_ALL INFO Rebal Date-----------------2020-08-07T00:00:00.000000000
+2025-11-13 13:30:35,339 - windmillcheck_ALL - INFO - Rebal Date-----------------2020-10-01T00:00:00.000000000
+13:30:35,339 windmillcheck_ALL INFO Rebal Date-----------------2020-10-01T00:00:00.000000000
+2025-11-13 13:30:35,528 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-04-06T00:00:00.000000000
+13:30:35,528 windmillcheck_ALL INFO Rebal Date-----------------2023-04-06T00:00:00.000000000
+2025-11-13 13:30:35,547 - windmillcheck_ALL - INFO - Rebal Date-----------------2023-07-07T00:00:00.000000000
+13:30:35,547 windmillcheck_ALL INFO Rebal Date-----------------2023-07-07T00:00:00.000000000
+2025-11-13 13:30:35,627 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-09-06T00:00:00.000000000
+13:30:35,627 windmillcheck_ALL INFO Rebal Date-----------------2024-09-06T00:00:00.000000000
+2025-11-13 13:30:35,627 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-10-04T00:00:00.000000000
+13:30:35,627 windmillcheck_ALL INFO Rebal Date-----------------2024-10-04T00:00:00.000000000
+2025-11-13 13:30:35,643 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-11-01T00:00:00.000000000
+13:30:35,643 windmillcheck_ALL INFO Rebal Date-----------------2024-11-01T00:00:00.000000000
+2025-11-13 13:30:35,643 - windmillcheck_ALL - INFO - Rebal Date-----------------2024-12-06T00:00:00.000000000
+13:30:35,643 windmillcheck_ALL INFO Rebal Date-----------------2024-12-06T00:00:00.000000000
+2025-11-13 13:30:35,659 - windmillcheck_ALL - INFO - Rebal Date-----------------2025-02-01T00:00:00.000000000
+13:30:35,659 windmillcheck_ALL INFO Rebal Date-----------------2025-02-01T00:00:00.000000000
+2025-11-13 13:30:35,674 - windmillcheck_ALL - INFO - Rebal Date-----------------2025-03-07T00:00:00.000000000
+13:30:35,674 windmillcheck_ALL INFO Rebal Date-----------------2025-03-07T00:00:00.000000000
+2025-11-13 13:30:35,674 - windmillcheck_ALL - INFO - Rebal Date-----------------2025-04-04T00:00:00.000000000
+13:30:35,674 windmillcheck_ALL INFO Rebal Date-----------------2025-04-04T00:00:00.000000000
+2025-11-13 13:30:35,674 - windmillcheck_ALL - INFO - Rebal Date-----------------2025-05-02T00:00:00.000000000
+13:30:35,674 windmillcheck_ALL INFO Rebal Date-----------------2025-05-02T00:00:00.000000000
+2025-11-13 13:30:35,706 - windmillcheck_ALL - INFO - Rebal Date-----------------2025-09-05T00:00:00.000000000
+13:30:35,706 windmillcheck_ALL INFO Rebal Date-----------------2025-09-05T00:00:00.000000000
