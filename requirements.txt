@@ -12,3 +12,6 @@ python-dateutil
 eikon
 arch
 tqdm
+sqlalchemy
+pymongo
+psycopg2
