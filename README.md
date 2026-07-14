@@ -2,7 +2,7 @@
 
 This project builds a forward-looking volatility regime signal for Indian equities and uses it to construct a low-volatility equity portfolio, benchmarked primarily against smallcase's SCSB_0003. **This README is a knowledge-transfer (KT) document** — the author is leaving the firm, and it is written so a successor with zero prior context can become productive in one sitting.
 
-Every claim below was checked against the actual notebook code, the actual output data files, or both — not just repeated from the existing Word reports. Where a prior claim didn't hold up, it is flagged explicitly rather than silently repeated. That verification work is the main value of this rewrite; see Section 2 and Section 5 for the specific corrections.
+Every claim below was checked directly against the actual notebook code and the actual output data files, not just against the narrative in the formal Word reports. Where something couldn't be verified from source, it's flagged explicitly rather than stated as fact — see Section 2 and Section 5.
 
 ---
 
@@ -32,14 +32,9 @@ The project evolved through three phases — understanding this arc will save yo
 
 **Caveats a successor should know before relying on it further:**
 
-1. **The NSE Top-50 universe used for the whole 6-year backtest is not a proper point-in-time universe.** `mcap_based_universe_202602251340.csv` — the file the "Top-50" label refers to — was independently inspected and is **not** a 50-row snapshot at all. It's a full historical market-cap table (526,104 rows, ~3,000 tickers per date, spanning 2005–2026). Whatever Top-50 filtering actually drives the backtest happens downstream (in a notebook, applying a mcap-rank cutoff as of the latest date) and is applied **retroactively across the entire 2020–2026 backtest** — i.e. today's biggest 50 companies are assumed to have also been the biggest 50 in 2020. This is a forward-looking-bias risk that is *already flagged* in the research report, but the underlying data file is more clearly a full-market table than "a Top-50 snapshot," which is worth correcting in your own mental model.
-2. **The ~0.10–0.11 correlation between the signal and realised volatility, often cited as evidence the signal is "intentionally low but valid," does not reproduce to one consistent number.** Independent notebook checks found: `Monthly_signal_analysis.ipynb` outputs 0.1522 (simple/IDW) and 0.1119 (Nadaraya-Watson); the Phase-1 research doc quotes 0.1143 and 0.1031; and a near-duplicate motif notebook (`extended_analysis.ipynb` — see caveat 3) shows completely different values ranging from -0.39 to +0.66 depending on ticker/window. Treat "~0.11" as an order-of-magnitude characterisation, not a precise, reproducible statistic — it appears to vary by ticker, sample window, and notebook version.
-3. **Several notebooks are miscredited in the previous KT document** and, by extension, in earlier drafts of this README. Verified by direct inspection:
-   - `top50mcap_analysis.ipynb` does **not** contain the Fixed-10/Dynamic/Gap-Regime comparison it was credited with. It's a pasted copy of a signal-calibration script plus an EqualWeight-vs-InvVol backtest. The "avg 7.6 stocks/month" statistic actually lives in `dynamic_low_vol_selection.ipynb`; the "28.9% turnover" statistic actually lives in `strategy_comparison.ipynb`.
-   - `Monthly_rebal.ipynb` does **not** combine all three strategies into a unified backtest. It is structurally near-identical to `Weekly_rebal_motifs.ipynb` — the same MASS motif-matching pipeline, not a strategy-comparison notebook.
-   - `extended_analysis.ipynb` is **not** macro/FX/fixed-income feature engineering work. It is a near-verbatim duplicate of the motif-matching pipeline (same `mk.Match`, same window/top-k logic). The actual macro-variable scoping work exists only as a to-do list inside `Volatility Research for AA smallcases.docx` — it was never started in code.
-   - The corrected notebook tiering is in Section 8 below.
-4. **`LinearModel.py`** (listed as part of the "core library" in the prior CLAUDE.md/AGENTS.md architecture tables) is confirmed **orphaned** — a repo-wide grep found zero imports of it from any notebook or pipeline file.
+1. **The NSE Top-50 universe used for the whole 6-year backtest is not a proper point-in-time universe.** `mcap_based_universe_202602251340.csv` — the file the "Top-50" label refers to — is not a 50-row snapshot. It's a full historical market-cap table (526,104 rows, ~3,000 tickers per date, spanning 2005–2026). Whatever Top-50 filtering actually drives the backtest happens downstream (in a notebook, applying a mcap-rank cutoff as of the latest date) and is applied **retroactively across the entire 2020–2026 backtest** — i.e. today's biggest 50 companies are assumed to have also been the biggest 50 in 2020. This is a known forward-looking-bias risk (also noted in the research report).
+2. **The ~0.10–0.11 correlation between the signal and realised volatility, often cited as evidence the signal is "intentionally low but valid," does not reproduce to one consistent number.** `Monthly_signal_analysis.ipynb` outputs 0.1522 (simple/IDW) and 0.1119 (Nadaraya-Watson); the Phase-1 research doc quotes 0.1143 and 0.1031; and a related motif notebook shows values ranging from -0.39 to +0.66 depending on ticker/window. Treat "~0.11" as an order-of-magnitude characterisation, not a precise, reproducible statistic — it appears to vary by ticker, sample window, and notebook.
+3. **`LinearModel.py`** is confirmed **orphaned** — a repo-wide grep found zero imports of it from any notebook or pipeline file, despite being listed in the architecture overview as part of the core library.
 
 None of these caveats change the headline number — they change how much weight to put on the *supporting* narrative around it (universe construction, signal-quality metric, and which notebook to open for which sub-topic).
 
@@ -49,7 +44,7 @@ None of these caveats change the headline number — they change how much weight
 
 | Term | Definition |
 |---|---|
-| **MASS** | Mueen's Algorithm for Similarity Search — computes a z-normalised Euclidean distance profile between a query subsequence and every window of a longer target series. Implemented in `Python_Scripts/mass.py` via `np.convolve`-based rolling correlation, not FFT (despite some docs describing it as FFT-based) and not DTW. |
+| **MASS** | Mueen's Algorithm for Similarity Search — computes a z-normalised Euclidean distance profile between a query subsequence and every window of a longer target series. Implemented in `Python_Scripts/mass.py` via `np.convolve`-based rolling correlation (not FFT, not DTW). |
 | **Motif / analogue** | A historical 45-trading-day window whose squared-return pattern most closely matches the current 45-day window, per MASS distance. |
 | **`Vol_Regime_Smooth`** | The final, production signal — EWM-smoothed (α=0.15), `[0,1]`-bounded, monthly-sampled volatility regime indicator. 0 = calm, 1 = stressed. All portfolio construction uses this column. |
 | **IDW (Inverse-Distance Weighting)** | Aggregation scheme combining the 5 nearest analogues: `weight_k = (1/distance_k) / Σ(1/distance_j)`. Closer analogues get more weight. |
@@ -125,7 +120,7 @@ All figures below are pulled directly from `strategy_comparison.xlsx` → sheet 
 | SCET_0013 | 8.97% | 7.92% | 1.13 | 1.54 | -21.47% | 0.42 |
 | **SCSB_0003 (primary benchmark)** | 8.51% | 11.20% | 0.79 | 1.12 | -22.40% | 0.38 |
 
-**Note on strategy names:** the actual output file uses `Dynamic_InvVol` and `Gap_Regime` (underscored) — not "Dynamic" or "Gap" alone as some earlier documents shorten them to. Use the exact names if querying the Excel/notebook outputs directly.
+**Note on strategy names:** the output file uses `Dynamic_InvVol` and `Gap_Regime` (underscored). Use these exact names if querying the Excel/notebook outputs directly.
 
 **Regime-conditional performance** (from the research report, not independently re-derived from a raw regime-tagged output file — treat as report-sourced): Dynamic InvVol's biggest edge over SCSB_0003 comes in stressed regimes (29.5% vs 13.9% CAGR, +1,560 bps) — precisely because the no-floor design lets it concentrate into 1–3 names when the market is turbulent.
 
@@ -184,8 +179,8 @@ Linear Model/
 ├── dynamic_low_vol_selection.xlsx          Dynamic strategy detail — 5 sheets incl. Full_Scoring, Weight_Matrix
 ├── gap_regime_vol_selection.xlsx           Gap+Regime strategy detail — 6 sheets
 ├── monthly_low_vol_selection.xlsx          Fixed-10 reference portfolio — 6 sheets
-├── mcap_based_universe_202602251340.csv    ⚠ full market-cap history (526,104 rows, ~3,000 tickers), NOT a
-│                                            pre-filtered Top-50 snapshot despite the filename/prior docs implying so
+├── mcap_based_universe_202602251340.csv    ⚠ full market-cap history (526,104 rows, ~3,000 tickers) —
+│                                            not a pre-filtered Top-50 snapshot; Top-50 filtering is applied downstream
 ├── smoothed_signal.xlsx / smoothed_signal_new.xlsx   early single-ticker validation snapshots (69 rows each) —
 │                                            smaller/older than the full 304-date production cache above
 └── *.ipynb                                 15+ research notebooks — see Section 8 for which ones matter
@@ -193,9 +188,9 @@ Linear Model/
 
 ---
 
-## 8. Notebook Reading Guide (Corrected)
+## 8. Notebook Reading Guide
 
-There are 15+ notebooks. **You do not need to read all of them.** This tiering was corrected against what each notebook was directly confirmed to contain — several notebooks were previously mis-tiered (see Section 2, caveat 3).
+There are 15+ notebooks. **You do not need to read all of them.** This tiering reflects what each notebook was directly confirmed to contain by reading its actual code and outputs.
 
 ### Tier 1 — Must read (in this order)
 | # | Notebook | Confirmed to contain |
@@ -212,13 +207,13 @@ There are 15+ notebooks. **You do not need to read all of them.** This tiering w
 | `Motif+PSMC.ipynb` | IDW vs. Nadaraya-Watson kernel weighting comparison — confirmed both aggregation functions exist here; treat any specific correlation number from this notebook with the caveat in Section 2. |
 | `Backtest_1.ipynb` | Early weekly Nifty/Gold asset-allocation backtest. Confirmed: uses `QuantBacktester.IndexCalculator`, loads a pre-computed signal from `smoothed_signal.xlsx`. **Not confirmed:** any in-notebook HAR-RS model code — it consumes an already-built signal rather than deriving one. Useful for understanding the AA backtest mechanics, not for the HAR-RS story. |
 
-### Tier 3 — Skip / superseded (confirmed duplicative or obsolete)
+### Tier 3 — Skip / superseded
 | Notebook | Why you can skip it |
 |---|---|
-| `top50mcap_analysis.ipynb` | **Corrected tiering** — does not contain the strategy comparison it was previously credited with; it's a calibration-script copy plus an EqW-vs-InvVol test already superseded by `strategy_comparison.ipynb`. |
-| `Monthly_rebal.ipynb` | **Corrected tiering** — structurally duplicates `Weekly_rebal_motifs.ipynb`'s motif pipeline; does not combine the three strategies as previously claimed. |
-| `extended_analysis.ipynb` | **Corrected tiering** — not macro/FX work; another near-duplicate of the motif pipeline. If you're asked to start the macro-variable extension, the actual starting point is the to-do list in `Volatility Research for AA smallcases.docx`, not this notebook. |
-| `FIGARCH_implementation.ipynb`, `FIGARCH_model.ipynb`, `garch_implementation.ipynb`, `LM.ipynb`, `model playground.ipynb` | Confirmed early/duplicated Phase-1 scratch work (same boilerplate imports, GARCH/FIGARCH family). Superseded by the MASS approach. Only relevant if reviving GARCH-family models. |
+| `top50mcap_analysis.ipynb` | A calibration-script copy plus an EqW-vs-InvVol test, superseded by `strategy_comparison.ipynb`. Does not contain a Fixed-10/Dynamic/Gap-Regime comparison. |
+| `Monthly_rebal.ipynb` | Structurally duplicates `Weekly_rebal_motifs.ipynb`'s motif pipeline; does not combine the three strategies into a unified backtest. |
+| `extended_analysis.ipynb` | A near-duplicate of the motif pipeline, not macro/FX/fixed-income work. If you're asked to start the macro-variable extension, the actual starting point is the to-do list in `Volatility Research for AA smallcases.docx`, not this notebook. |
+| `FIGARCH_implementation.ipynb`, `FIGARCH_model.ipynb`, `garch_implementation.ipynb`, `LM.ipynb`, `model playground.ipynb` | Early/duplicated Phase-1 scratch work (same boilerplate imports, GARCH/FIGARCH family). Superseded by the MASS approach. Only relevant if reviving GARCH-family models. |
 
 ---
 
@@ -275,7 +270,7 @@ Configuration lives entirely in `files/config.py` (`PipelineConfig` dataclass) �
 ### Research extensions worth exploring
 | Extension | Description |
 |---|---|
-| Macro variable integration | FX, commodities, global equities, fixed income, PE/PB/Div yield across 7 market-cap + 18 sectoral indices — fully scoped as a to-do list in `Volatility Research for AA smallcases.docx`, but **not started in any notebook** (see corrected tiering, Section 8). |
+| Macro variable integration | FX, commodities, global equities, fixed income, PE/PB/Div yield across 7 market-cap + 18 sectoral indices — fully scoped as a to-do list in `Volatility Research for AA smallcases.docx`, but **not started in any notebook** (see Section 8). |
 | Gold modelling for the original Nifty/Gold AA smallcase | Still unresolved per the original research brief: Supertrend on Gold first (`Python_Scripts/ST.py::getSupertrend` already exists and could be reused), then the same linear-model framework used for Nifty. |
 | Survivorship-bias-free backtesting | Currently relies on ad hoc Refinitiv CSV backfill for delisted tickers; a proper historical-constituents database with delisting dates would be more robust. |
 | Extend signal to other geographies/indices | The MASS pipeline is ticker-agnostic — just needs price history in `INDTradingDays.xlsx` and a `config.py` entry. |
